@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poiret One", sans-serif;
+    /* font-family: "Poiret One", sans-serif; */
     /* font-family: "Great Vibes", cursive; */
 }
 
@@ -50,6 +50,7 @@ header
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 10% 20%;
 }
 
@@ -68,6 +69,7 @@ header
     font-size: 6rem;
     text-align: end;
     font-weight: 600;
+    text-wrap: nowrap;
 }
 
 #h1-2, #h1-4
@@ -86,6 +88,17 @@ header
 }
 
 /* Honeymoon package section */
+
+#honeymoon .card
+{
+    border-width: 0.5px;
+    border-color: rgba(215, 214, 212, 0.43);
+}
+
+#honeymoon .card:hover
+{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.129), 0 3px 6px rgba(0, 0, 0, 0.253);
+}
 
 #honeymoon h1
 {
@@ -112,10 +125,429 @@ header
     font-weight: 600;
 }
 
-@media (max-width:991px)
+#more-packages
+{
+    background-color: rgb(91, 14, 163);
+    font-weight: 600;
+    border: none;
+}
+
+/* kerala section */
+
+#kerala-section
+{
+    background-color: rgba(214, 209, 203, 0.385);
+}
+
+#kerala-section h1
+{
+    text-align: center;
+    padding: 3% 0px 2% 0px;
+    font-weight: 600;
+}
+
+.kerala-carousal, .kerala-div
+{
+    padding: 0px 2%;
+}
+
+.c-item
+{
+    height: 20rem;
+}
+
+.c-img
+{
+    object-fit: cover;
+    height: 100%;
+}
+
+.kerala-carousal h5
+{
+    font-size: 100px;
+    font-family: 700;
+    color: blue;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.kerala-div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kerala-vdo
+{
+    flex: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.kerala-grid
+{
+    flex: 1fr;
+    gap: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [col] 1fr [col] 1fr [col] 1fr [col] 1fr  ;
+    grid-template-rows: [row] auto [row] auto [row] ;
+    color: #444;
+  }
+
+  .box {
+    color: #fff;
+    border-radius: 5px;
+    height: 7.8125rem;
+
+  }
+
+  .a {
+    grid-column: col / span 2;
+    grid-row: row ;
+  }
+  .b {
+    grid-column: col 3 / span 2 ;
+    grid-row: row ;
+  }
+  .c {
+    grid-column: col ;
+    grid-row: row 2 ;
+  }
+  .d {
+    grid-column: col 2 / span 3 ;
+    grid-row: row 2 ;
+  }
+
+  .e {
+    grid-column: col / span 4;
+    grid-row: row 3;
+  }
+.grid-img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* north indian */
+
+#north-india h1
+{
+    text-align: center;
+    padding: 3% 0px 2% 0px;
+    font-weight: 600;
+}
+
+#north-india .card
+{
+    height:15rem;
+    padding: 5%;
+    border-radius: 20px;
+    margin-top: 2%;
+}
+
+#north-india img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+}
+
+.overlay
+{
+    width: 91%;
+    height: 89%;
+    border-radius: 20px;
+    transition: 1s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    background-image: linear-gradient(90deg, rgba(0, 36, 18, 0.537) 0%, rgba(9, 121, 82, 0.541) 47%, rgba(0, 255, 200, 0.507) 100%);
+}
+
+.overlay h3
+{
+    font-weight: 700;
+    color: white;
+    padding: 10%;
+}
+
+.overlay p
+{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.overlay span
+{
+    color: rgb(0, 204, 255);
+}
+
+#north-india .card:hover .overlay
+{
+    opacity: 1;
+}
+
+#north-india img:hover
+{
+    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);
+}
+
+/* premium section */
+
+#premium .section-head
+{
+    text-align: center;
+    padding: 3% 0px 2% 0px;
+    font-weight: 600;
+}
+
+#premium h6
+{
+    color: rgba(255, 0, 0, 0.69);
+    font-family: "Great Vibes", cursive;
+    font-size: 2rem;
+}
+
+#premium .section-body
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2% 10%;
+}
+
+.feature
+{
+    text-align: center;
+    padding: 2%;
+    margin-top: 2%;
+    width: 10rem;
+    height: 14rem;
+    background-color: rgba(214, 209, 203, 0.385);
+    border-radius: 20%;
+}
+
+.feature-img
+{
+    border-radius: 50%;
+    background-color: bisque;
+
+}
+.feature-img img
+{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.feature h3
+{
+    text-wrap: nowrap;
+    font-size: 1rem;
+    margin-top: 4%;
+}
+
+.feature a
+{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+/* testimonial section */
+
+#testimonial
+{
+    background-color: rgba(214, 209, 203, 0.385);
+}
+
+#testimonial .section-head
+{
+    text-align: center;
+    padding: 1% 0px 2% 0px;
+    font-weight: 600;
+}
+
+.brand
+{
+    font-size: 3rem;
+    padding-bottom: 1%;
+    color: rgb(249, 231, 95);
+}
+
+#testimonial h6
+{
+    font-family: "Great Vibes", cursive;
+    font-size: 2rem;
+    color: #3d7ef8;
+    font-weight: 700;
+}
+
+#testimonial .section-body
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.review
+{
+    width: 20%;
+    height: 25%;
+}
+
+.review img
+{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    object-position:bottom;
+}
+
+.rating i
+{
+    font-size: 1.5rem;
+    color: rgb(44, 141, 108);
+    padding: 1% 0px;
+}
+
+#testimonial h3
+{
+    font-size: 1.2rem;
+}
+
+#testimonial p
+{
+    text-align: justify;
+}
+
+/* footer */
+
+footer
+{
+    background-color: rgb(22, 3, 74);
+    padding: 2% 10%;
+}
+
+.footer-main
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-div li
+{
+    list-style: none;
+}
+
+.footer-div .main-link
+{
+    color: orange;
+    font-size: 1.5rem;
+}
+
+.footer-div .footer-link
+{
+    color: rgba(255, 255, 255, 0.773);
+    text-decoration: none;
+    line-height:2rem;
+}
+.footer-div .link2
+{
+    text-align: center;
+}
+
+.footer-div i
+{
+    color: rgba(255, 255, 255, 0.773);
+    font-size: 2.2rem;
+    padding: 1rem;
+}
+
+.footer-div h6
+{
+    color: rgba(255, 255, 255, 0.773);
+    text-align: center;
+}
+
+.footer-sub
+{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.773);
+}
+@media (max-width:1410px)
+{
+    .kerala-grid, .kerala-vdo
+    {
+        flex: 100%;
+    }
+}
+
+@media (max-width:1180px)
 {
     .home-div
     {
-        padding: 15% 0px 0px 0px;
+        padding: 10% 0px;
     }
+    #home h1
+    {
+        text-align: center;
+        text-wrap: nowrap;
+    }
+}
+
+@media(max-width:665px)
+{
+
+    .kerala-vdo iframe
+    {
+        width: 95%;
+        height: auto;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: [col] 1fr [col] 1fr [col] 1fr [col] 1fr  ;
+        grid-template-rows: [row] auto [row] auto [row] ;
+      }
+
+      .review
+      {
+        flex: 100%;
+      }
+
+      .review img
+      {
+        object-position:center;
+      }
+
+      .footer-main
+      {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
 }
